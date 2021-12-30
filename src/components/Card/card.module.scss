@@ -1,15 +1,11 @@
 .card {
-    margin: 0 0 0 20px;
-    padding: 20px 30px;
+    margin: 10px;
+    padding: 10px 40px;
     border-radius: 15px;
     font-size: 14px;
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.5);  
-    box-shadow: 3px 3px 12px 1px rgba(0,0,0,0.25);    
-
-    &:first-child {
-        margin: 0;
-    }   
+    color: #fff;
+    background-color: rgba(0,0,0,0.25); 
+    box-shadow: 3px 3px 10px 1px rgba(255, 255, 255, 0.15);        
 }
 
 .mainInfo {
@@ -29,8 +25,7 @@
     font-size: 16px;
 }
 
-.temperature {
-    margin: 5px 0;
+.temperature {   
     font-size: 40px;
     font-weight: 500;
 }
@@ -40,7 +35,7 @@
 }
 
 .information {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .information>div {
