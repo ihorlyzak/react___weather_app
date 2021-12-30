@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from '../Input/Input';
-import { Card } from '../Card/Card';
+import { CardList } from '../CardList/CardList';
 
 import './App.scss';
 
@@ -14,14 +14,9 @@ function App() {
     <div className='mainBackground'>
 
       <div className='main'>
-        <Input setCitiesList={setCitiesList} />        
+        <Input setCitiesList={setCitiesList} />
 
-        <div className='cardList'>
-          {
-            citiesList.map(city => <Card key={city} city={city} />)
-          }
-        </div>
-
+        <CardList citiesList={citiesList} />        
       </div>
 
     </div>
