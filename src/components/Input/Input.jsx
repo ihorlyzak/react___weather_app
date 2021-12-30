@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './input.module.scss';
 
-const Input = () => {
+export const Input = () => {
     return (
         <div className={styles.inputWrap}>
             <input placeholder='Enter the city name' className={styles.input}></input>
@@ -9,5 +9,3 @@ const Input = () => {
         </div>
     );
 }
-
-export default Input;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './card.module.scss';
 
-const Card = () => {
+export const Card = () => {
     return (
         <div className={styles.card}>
             <div className={styles.mainInfo}>
@@ -18,4 +18,4 @@ const Card = () => {
     );
 }
 
-export default Card;
+
