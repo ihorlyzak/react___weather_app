@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './card.module.scss';
 
-export const Card = () => {
+export const Card = ({city}) => {
+    
     return (
         <div className={styles.card}>
             <div className={styles.mainInfo}>
                 <img src='https://openweathermap.org/img/wn/10d@2x.png' alt='Weather type' className={styles.icon}/>
-                <div className={styles.title}>New York</div>
+                <div className={styles.title}>{city}</div>
                 <div className={styles.description}>Cloudy</div>
                 <div className={styles.temperature}>----</div>
             </div>
