@@ -1,8 +1,8 @@
 .main {
     padding: 35px;
 
-    &Background {
-        background: url('./images/app_background.jpg');
+    &Background {        
+        background: url('/assets/images/app_background.jpg');
         width: 100vw;
         height: 100vh;
         background-position: 50%;
@@ -11,4 +11,3 @@
 }
 
 
-// Про index.js в кожній папці ше поясниш)
