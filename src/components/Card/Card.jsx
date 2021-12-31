@@ -36,7 +36,7 @@ export const Card = ({ city }) => {
 
             <div className={styles.information}>              
                 <div>Humidity: {humidity}%</div>
-                <div>Feels like: {feels_like}</div>
+                <div>Feels like: {feels_like}°C</div>
             </div>
 
         </div>
