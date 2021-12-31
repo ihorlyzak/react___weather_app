@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { API_KEY } from '../../settings'; //API
+import { API_KEY } from 'settings'; //API
 
 import styles from './card.module.scss';
-
 
 
 export const Card = ({ city }) => {
@@ -14,8 +13,7 @@ export const Card = ({ city }) => {
             .then(json => setData(json)) // .then(setData) 
     }, []);
 
-    console.log('data', data);
-    if(!data) return null; //if data is empty, skip render
+    if (!data) return null; //if data is empty, skip render
     const { name, weather, main } = data; //destructurize object to get info for display at card
     const { description, icon } = weather[0]; //from array (API))
     const { temp, humidity, feels_like } = main;
@@ -29,7 +27,7 @@ export const Card = ({ city }) => {
                 <div className={styles.temperature}>{temp.toFixed()}</div>
             </div>
             <div className={styles.information}>
-                <div>Humidity: {humidity}</div>
+                <div>Humidity: {humidity}%</div>
                 <div>Feels like: {feels_like}</div>
             </div>
         </div>

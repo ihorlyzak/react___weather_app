@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
-import { Card } from '../Card/Card';
-
-
+import React from 'react';
+import { Card } from 'components/Card/Card';
 
 
 export const CardList = ({ citiesList }) => {
-  useEffect(() => {
-    console.log('useEffect', citiesList);
-  });
-
   return (
     <div className='cardList'>
       {

@@ -3,7 +3,6 @@ import React, { useState, useRef } from 'react';
 import styles from './input.module.scss';
 
 
-
 export const Input = ({ setCitiesList }) => {
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef(null);

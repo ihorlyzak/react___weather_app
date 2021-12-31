@@ -1,0 +1,1 @@
+export { MainBackground } from './Input';
