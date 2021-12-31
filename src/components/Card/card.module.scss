@@ -1,11 +1,14 @@
 .card {
     margin: 10px;
-    padding: 10px 40px;
-    border-radius: 15px;
+    padding: 10px;
+    min-width: 150px;
+    max-width: 200px;
+    border-radius: 25px;
     font-size: 14px;
+    text-align: center;
     color: #fff;
-    background-color: rgba(0,0,0,0.25); 
-    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.25);        
+    background-color: rgba(0, 0, 0, 0.2);  
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.25);        
 }
 
 .mainInfo {
@@ -15,23 +18,29 @@
     justify-content: center;
 }
 
+.icon {
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 100px 10px rgba(0, 0, 0, 0.25);        
+}
+
 .title {
-    font-size: 24px;
+    font-size: 30px;   
+    font-weight: 700;
+}
+
+.date {
+    font-size: 11px;
+}
+
+.temperature {   
+    font-size: 50px;
     font-weight: 500;
 }
 
 .description {
     margin: 5px 0;
     font-size: 16px;
-}
-
-.temperature {   
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.temperature::after {
-    content: '°';
 }
 
 .information {

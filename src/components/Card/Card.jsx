@@ -18,18 +18,27 @@ export const Card = ({ city }) => {
     const { description, icon } = weather[0]; //from array (API))
     const { temp, humidity, feels_like } = main;
 
+    // current date
+    const currentDate = new Date();
+    const date = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+
     return (
         <div className={styles.card}>
+
             <div className={styles.mainInfo}>
                 <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt='Weather type' className={styles.icon} />
                 <div className={styles.title}>{name}</div>
-                <div className={styles.description}>{description}</div>
-                <div className={styles.temperature}>{temp.toFixed()}</div>
+                <div className={styles.date}>{date}</div>
+                <div className={styles.temperature}>{temp.toFixed()}°C</div>
+                <div>{description}</div>
+                <div>-----------------------</div>
             </div>
-            <div className={styles.information}>
+
+            <div className={styles.information}>              
                 <div>Humidity: {humidity}%</div>
                 <div>Feels like: {feels_like}</div>
             </div>
+
         </div>
     );
 }
