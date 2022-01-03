@@ -4,11 +4,11 @@ import { CardList } from 'components/CardList/CardList';
 import { useSitiesList } from 'components/hooks/useCitiesList'; //custom hook
 
 export const Main = () => {
-    const [citiesList, setCitiesList] = useSitiesList();
+    const [citiesList, dispatch] = useSitiesList();
 
     return (
         <div className='main'>
-            <Input setCitiesList={setCitiesList} />
+            <Input dispatch={dispatch} />
 
             <CardList citiesList={citiesList} />
         </div>

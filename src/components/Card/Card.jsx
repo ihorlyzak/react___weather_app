@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useWeather } from 'components/hooks/useWeather'; //custom hook
 
 import styles from './card.module.scss';
 
 
-export const Card = ({ city }) => {
+export const Card = memo(({ city }) => {
     const data = useWeather(city);
-    
+
     if (!data) return null; //if data is empty, skip render
     const { name, weather, main } = data; //destructurize object to get info for display at card
     const { description, icon } = weather[0]; //from array (API))
@@ -35,6 +35,6 @@ export const Card = ({ city }) => {
 
         </div>
     );
-}
+})
 
 

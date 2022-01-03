@@ -3,20 +3,25 @@ import React, { useState, useRef } from 'react';
 import styles from './input.module.scss';
 
 
-export const Input = ({ setCitiesList }) => {
+export const Input = ({ dispatch }) => {
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef(null);
 
     const handleOnClick = () => {
-        if (inputValue !== '') { //no add for empty input
-            setCitiesList((currentArray) => [...currentArray, inputValue])
+        if (inputValue.length) { //no add for empty input         
+
+            dispatch({
+                type: 'ADD_CITY',
+                payload: inputValue,
+            })
+
+            setInputValue(''); // cleans form
+
+            inputRef.current.focus(); // focus will not disappear from the form
+
         } else (
             alert('Aghh.. Imput is empty. Enter the city name please')
         )
-
-        setInputValue(''); // cleans form
-
-        inputRef.current.focus(); // focus will not disappear from the form
     }
 
     const handleOnChange = (e) => {
