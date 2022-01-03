@@ -11,9 +11,25 @@
     transition: all 0.5s;
 }
 
-.actionButton {
+.actionButtonWrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.editCity {
+    background: transparent;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.5s;
+
+    &:hover {
+        color: rgb(255, 251, 0);
+    }
 }
 
 .deleteCity {

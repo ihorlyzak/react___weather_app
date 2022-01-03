@@ -16,9 +16,16 @@ export const Card = memo(({ city, dispatch }) => {
     const currentDate = new Date();
     const date = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
 
-    const handleOnClick = () => {
+    const handleOnEdit = () => {
         dispatch({
-            type: 'DELETE_CITY', 
+            type: 'EDIT_CITY',
+            payload: city,
+        })
+    }
+
+    const handleOnDelete = () => {
+        dispatch({
+            type: 'DELETE_CITY',
             payload: city,
         })
     }
@@ -26,8 +33,9 @@ export const Card = memo(({ city, dispatch }) => {
     return (
         <div className={styles.card}>
 
-            <div className={styles.actionButton}>
-                <button className={styles.deleteCity} onClick={handleOnClick}>X</button>
+            <div className={styles.actionButtonWrapper}>
+                <button className={styles.editCity} onClick={handleOnEdit}>edit</button>
+                <button className={styles.deleteCity} onClick={handleOnDelete}>X</button>
             </div>
 
             <div className={styles.mainInfo}>
