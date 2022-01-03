@@ -6,12 +6,21 @@ const initialState = {
 
 const reducer = (state, action) => {
     switch (action.type) {
+
         case 'ADD_CITY': {
             const newState = { ...state, citiesList: [...state.citiesList, action.payload] }; //copying state arr & creating new with new element
             return newState;
         }
+
+        case 'DELETE_CITY': {
+            const oldArray = state.citiesList;
+            const newArray = oldArray.filter(el => el !== action.payload); //if element === city, delete element           
+            return {...state, citiesList: newArray};
+        }
+
         default:
             return initialState;
+
     }
 }
 

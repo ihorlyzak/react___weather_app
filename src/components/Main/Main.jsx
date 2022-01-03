@@ -10,7 +10,7 @@ export const Main = () => {
         <div className='main'>
             <Input dispatch={dispatch} />
 
-            <CardList citiesList={citiesList} />
+            <CardList citiesList={citiesList} dispatch={dispatch} />
         </div>
     )
 }
