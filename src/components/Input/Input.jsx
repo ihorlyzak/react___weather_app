@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
+import { GlobalContext } from 'components/Main/Main';
 
 import styles from './input.module.scss';
 
 
-export const Input = ({ dispatch, inputValue, editingCity }) => {
+export const Input = () => {
     // const [inputValue, setInputValue] = useState('');
     const inputRef = useRef(null);
+    const { dispatch, state: { inputValue, editingCity } } = useContext(GlobalContext);
 
     const handleOnAdd = () => {
         if (inputValue.length) { //no add for empty input         
@@ -60,9 +62,9 @@ export const Input = ({ dispatch, inputValue, editingCity }) => {
                 //if ediginfCity === true => display Save changes button
                 editingCity
                     ?
-                <button onClick={handleOnDone} className={styles.button}>Save changes</button>  
+                    <button onClick={handleOnDone} className={styles.button}>Save changes</button>
                     :
-                <button onClick={handleOnAdd} className={styles.button}>Add city</button>
+                    <button onClick={handleOnAdd} className={styles.button}>Add city</button>
 
             }
 

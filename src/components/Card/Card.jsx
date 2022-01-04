@@ -1,11 +1,14 @@
-import React, { memo } from 'react';
+import React, { memo, useContext } from 'react';
+import { GlobalContext } from 'components/Main/Main';
+
 import { useWeather } from 'components/hooks/useWeather'; //custom hook
 
 import styles from './card.module.scss';
 
 
-export const Card = memo(({ city, dispatch }) => {
+export const Card = memo(({ city }) => {
     const data = useWeather(city);
+    const { dispatch } = useContext(GlobalContext);
 
     if (!data) return null; //if data is empty, skip render
     const { name, weather, main } = data; //destructurize object to get info for display at card
@@ -55,5 +58,3 @@ export const Card = memo(({ city, dispatch }) => {
         </div>
     );
 })
-
-
