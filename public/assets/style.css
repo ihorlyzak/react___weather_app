@@ -1,0 +1,27 @@
+:root {
+    /* * colors */      
+    --black: #000;
+    --transparencyBlack: rgba(0, 0, 0, 0.7);
+    --cardBlack: rgba(0, 0, 0, 0.2);
+    --boxShadowBlack: rgba(0, 0, 0, 0.25);  
+    --white: #fff;
+    --blue: rgba(0, 153, 255, 0.7);
+    --hoverBlue: rgba(0, 153, 255, 1);
+    --red: #ff3946;
+    --yellow: rgb(255, 251, 0);
+
+    /* * borderRadius */
+    --borderRadius5: 5px;
+    --borderRadius15: 15px;
+    --borderRadiusFull: 50%;
+
+    /* * transition */
+    --duration05: .5s;
+    
+    /* * width */
+    /* --elMaxWidth: 1200px;
+    --lgMaxWidth: 992px;
+    --mdMaxWidth: 768px;
+    --smMaxWidth: 576px; */
+}
+

@@ -57,6 +57,10 @@ export const Input = () => {
 
     return (
         <div className={styles.inputWrap}>
+
+
+
+
             <input placeholder='Enter the name of the decired city' value={inputValue} className={styles.input} onChange={handleOnChange} ref={inputRef} />
             {// display add button or edit button
                 //if ediginfCity === true => display Save changes button
@@ -68,6 +72,16 @@ export const Input = () => {
 
             }
 
+            <div className={styles.sortSelectWrapper}>
+                <div className={styles.sortSeletBorder}></div>
+                <select className={styles.sortSelect}>
+                    <option value="name" className={styles.sortOption}>By name</option>
+                    <option value="temp" className={styles.sortOption}>By temp</option>
+                </select>
+            </div>
+
         </div>
+
+
     )
 }
