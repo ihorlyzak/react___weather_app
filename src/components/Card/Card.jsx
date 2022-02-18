@@ -1,10 +1,9 @@
 import React, { memo, useContext } from 'react';
 import { GlobalContext } from 'components/Main/Main';
+import { useWeather } from 'hooks/useWeather';
 
-import { useWeather } from 'components/hooks/useWeather'; //custom hook
 
 import styles from './card.module.scss';
-
 
 export const Card = memo(({ city }) => {
     const data = useWeather(city);
